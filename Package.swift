@@ -17,9 +17,17 @@ import PackageDescription
 
 let package = Package(
   name: "icu4c-swift",
-  pkgConfig: "icu-uc",
-  providers: [
-    .brew(["icu4c"]),
-    .apt(["libicu-dev"]),
+  products: [
+    .library(name: "ICU4C", targets: ["ICU4C"]),
+  ],
+  targets: [
+    .systemLibrary(
+      name: "ICU4C",
+      pkgConfig: "icu-uc",
+      providers: [
+        .brew(["icu4c"]),
+        .apt(["libicu-dev"]),
+      ]
+    ),
   ]
 )
