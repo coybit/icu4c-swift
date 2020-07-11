@@ -1,3 +1,4 @@
+// swift-tools-version:5.1
 // Copyright 2017 Tony Allevato.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
