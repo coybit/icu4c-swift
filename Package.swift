@@ -18,7 +18,7 @@ let package = Package(
   name: "icu4c-swift",
   pkgConfig: "icu-uc",
   providers: [
-    .Brew("icu4c"),
-    .Apt("libicu-dev"),
+    .brew(["icu4c"]),
+    .apt(["libicu-dev"]),
   ]
 )
